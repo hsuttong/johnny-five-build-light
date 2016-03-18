@@ -14,4 +14,4 @@ after_failure:
 
 env:
   global:
-    - VARIABLE_NAME=value
+    - VARIABLE_NAME=value- IFTTT_KEY=tE_SGEl4AVkA__BfgFaho
