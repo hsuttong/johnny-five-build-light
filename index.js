@@ -19,29 +19,34 @@ var server = http.createServer(function(req, resp) {
   var url = req.url.toLowerCase();
   if (url.indexOf("/events/build/started") == 0) {
     resp.end("Build Started");
+    rgb.color("#f4f90b");
   } else if (url.indexOf("/events/build/success") == 0) {
     resp.end("Build Successful");
+    rgb.color("#14850e");
   } else if (url.indexOf("/events/build/failure") == 0) {
     resp.end("Build Failed");
+    rgb.color("#ff2405");
+    rgb.strobe(500);
   } else {
     resp.end("Unknown event");
+    // rgb.color("#250fd7");
   }
 }).listen(8000);
 console.log("Server listening on: http://localhost:8000");
 
-var server = http.createServer(function(req, resp) {
-  if (!rgb) {
-    resp.end("No board found...");
-    return;
-  }
-
-  var url = req.url.toLowerCase();
-  if (url.indexOf("/events/build/started") == 0) {
-    rgb.color("#FFFF00");
-    resp.end("Build Started");
-  } else if (url.indexOf("/events/build/success") == 0) {
-    rgb.color("#00FF00");
-    resp.end("Build Successful");
-  }
-  // ...
-});
+// var server = http.createServer(function(req, resp) {
+//   if (!rgb) {
+//     resp.end("No board found...");
+//     return;
+//   }
+//
+//   var url = req.url.toLowerCase();
+//   if (url.indexOf("/events/build/started") == 0) {
+//     rgb.color("#FFFF00");
+//     resp.end("Build Started");
+//   } else if (url.indexOf("/events/build/success") == 0) {
+//     rgb.color("#00FF00");
+//     resp.end("Build Successful");
+//   }
+//   // ...
+// });
