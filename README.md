@@ -1,2 +1,2 @@
-####Master branch build status: 
-![](https://travis-ci.org/hsuttong/MovingHelper.svg?branch=master)
+####Master branch build status:
+![](https://travis-ci.org/hsuttong/johnny-five-build-light.svg?branch=master)
